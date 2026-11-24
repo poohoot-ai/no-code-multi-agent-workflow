@@ -1,0 +1,25 @@
+info:
+  name: W-4
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5678/webhook-test/harumarket-inquiry
+  body:
+    type: json
+    data: |-
+      {
+              "name": "정하람",
+              "order_no": "O-1007",
+              "content": "   ",
+              "agree_privacy": true
+            }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

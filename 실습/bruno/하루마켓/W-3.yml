@@ -1,0 +1,24 @@
+info:
+  name: W-3
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5678/webhook-test/harumarket-inquiry
+  body:
+    type: json
+    data: |-
+      {
+              "order_no": "O-2001",
+              "content": "티셔츠를 L 사이즈로 교환하고 싶습니다.",
+              "agree_privacy": true
+            }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,24 @@
+info:
+  name: W-2
+  type: http
+
+http:
+  method: POST
+  url: http://localhost:5678/webhook-test/harumarket-inquiry
+  body:
+    type: json
+    data: |-
+      {
+              "name": "송하은",
+              "order_no": "",
+              "content": "사이즈가 안 맞아서 원피스를 반품하려고요. 주문번호는 못 찾겠어요.",
+              "agree_privacy": true
+            }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

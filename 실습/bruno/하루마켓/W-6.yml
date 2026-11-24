@@ -1,0 +1,25 @@
+info:
+  name: W-6
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5678/webhook-test/harumarket-inquiry
+  body:
+    type: json
+    data: |-
+      {
+              "name": " 고다인 ",
+              "order_no": " O-2011 ",
+              "content": "슬리퍼가 발에 안 맞는데 한 치수 큰 걸로 바꾸거나 그냥 환불받고 싶어요.",
+              "agree_privacy": true
+            }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
