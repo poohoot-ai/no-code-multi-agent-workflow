@@ -1,0 +1,25 @@
+info:
+  name: D-6
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5678/webhook-test/harumarket-inquiry
+  body:
+    type: json
+    data: |-
+      {
+              "name": "배현우",
+              "order_no": "O-2005",
+              "content": "O-2005, O-2006 말고 2007번 주문도 같이 언제 출고되는지 알려 주세요.",
+              "agree_privacy": true
+            }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

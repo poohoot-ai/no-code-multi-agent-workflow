@@ -1,0 +1,25 @@
+info:
+  name: D-4
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5678/webhook-test/harumarket-inquiry
+  body:
+    type: json
+    data: |-
+      {
+              "name": "문가온",
+              "order_no": "O-2009",
+              "content": "O-2009 랜턴은 잘 받았어요. 같이 주문한 O-1003 캠핑 의자는 언제 오나요?",
+              "agree_privacy": true
+            }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,24 @@
+info:
+  name: D-2
+  type: http
+
+http:
+  method: POST
+  url: http://localhost:5678/webhook-test/harumarket-inquiry
+  body:
+    type: json
+    data: |-
+      {
+              "name": "김서연",
+              "order_no": "O-1001",
+              "content": "9월 2일에 발송됐다고 뜨는데 아직도 이어폰을 못 받았어요. 어디쯤 있는지 확인 부탁드립니다.",
+              "agree_privacy": true
+            }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

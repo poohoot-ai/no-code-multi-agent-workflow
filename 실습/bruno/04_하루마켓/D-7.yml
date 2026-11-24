@@ -1,0 +1,25 @@
+info:
+  name: D-7
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5678/webhook-test/harumarket-inquiry
+  body:
+    type: json
+    data: |-
+      {
+              "name": "문가온",
+              "order_no": "O-2008",
+              "content": "예약 판매로 주문한 등산 재킷은 언제 보내 주시나요?",
+              "agree_privacy": true
+            }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,25 @@
+info:
+  name: D-5
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5678/webhook-test/harumarket-inquiry
+  body:
+    type: json
+    data: |-
+      {
+              "name": "신예린",
+              "order_no": "O-2007",
+              "content": "에어프라이어 O-2007이랑 필터 주문 O-2070은 각각 언제 도착하나요?",
+              "agree_privacy": true
+            }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
